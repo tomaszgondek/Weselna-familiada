@@ -41,6 +41,7 @@ Kliknij **Przejdź do finału**. Panel zmieni sterowanie na finałowe, a tablica
 - **Nowe pytanie finałowe** czyści bieżące pytanie i przechodzi do kolejnego.
 - Zmiana aktywnego zawodnika nie kasuje obecnie wyświetlanego pytania.
 - Wczytanie pytania `.txt` w finale nie wyłącza finału ani nie resetuje wyników.
+- **Pokaż podsumowanie finału** wyświetla na tablicy pełne podsumowanie: nazwy i wyniki obu drużyn, zwycięzcę albo remis oraz sumę i rezultat finału względem progu 200 punktów.
 
 Przycisk **Wróć do rundy zasadniczej** opuszcza widok finału i przywraca zwykłe sterowanie.
 

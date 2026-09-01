@@ -7,14 +7,18 @@ i wciśnij F11 (albo przycisk „Pełny ekran”).
 from __future__ import annotations
 
 import json
+import sys
 import tkinter as tk
 from pathlib import Path
 from tkinter import filedialog, messagebox, ttk
 
 
-APP_DIR = Path(__file__).resolve().parent
+# W wersji EXE pliki pytań i zapisy gry są obok programu, natomiast zasoby
+# dołączone przez PyInstaller (np. WAV) pozostają w katalogu pakietu.
+BUNDLE_DIR = Path(__file__).resolve().parent
+APP_DIR = Path(sys.executable).resolve().parent if getattr(sys, "frozen", False) else BUNDLE_DIR
 SAVE_FILE = APP_DIR / "pytania.json"
-SOUNDS_DIR = APP_DIR / "assets" / "sounds"
+SOUNDS_DIR = BUNDLE_DIR / "assets" / "sounds"
 MIN_ANSWERS = 4
 MAX_ANSWERS = 6
 DEFAULT_SOUNDS = {
@@ -92,6 +96,10 @@ class Board(tk.Toplevel):
         bx, by, bw, bh = w*.06, h*.20, w*.88, h*.69
         c.create_rectangle(bx-8, by-8, bx+bw+8, by+bh+8, fill="#4e5262", outline="#b7b8c4", width=3)
         c.create_rectangle(bx, by, bx+bw, by+bh, fill=self.BG, outline="#010307", width=3)
+        state = self.app.state
+        if state.get("final_summary"):
+            self.draw_final_summary(c, w, h, bx, by, bw, bh, state)
+            return
         # Subtelna siatka obudowy LED.
         cell = max(9, int(min(bw/52, bh/25)))
         for x in range(int(bx)+4, int(bx+bw), cell):
@@ -99,7 +107,6 @@ class Board(tk.Toplevel):
         for y in range(int(by)+4, int(by+bh), cell):
             c.create_line(bx, y, bx+bw, y, fill="#18222b")
 
-        state = self.app.state
         question = state["question"] or "FAMILIADA"
         c.create_text(w/2, h*.09, text=question.upper(), fill="white", font=("Arial", max(14, int(w*.021)), "bold"), width=w*.78, justify="center")
         answers = state["answers"]
@@ -135,6 +142,26 @@ class Board(tk.Toplevel):
         else:
             c.create_text(w*.16, h*.94, text=f"{state['team1_name'].upper()}:  {state['team1']}", fill="white", font=("Arial", max(11, int(w*.014)), "bold"))
             c.create_text(w*.84, h*.94, text=f"{state['team2_name'].upper()}:  {state['team2']}", fill="white", font=("Arial", max(11, int(w*.014)), "bold"))
+
+    def draw_final_summary(self, canvas: tk.Canvas, width: int, height: int, x: float, y: float, board_width: float, board_height: float, state: dict) -> None:
+        """Końcowy ekran finału, przeznaczony dla publiczności na drugim ekranie."""
+        total = state["final_score1"] + state["final_score2"]
+        target = state["final_target"]
+        success = total >= target
+        team1, team2 = state["team1"], state["team2"]
+        name1, name2 = state["team1_name"].upper(), state["team2_name"].upper()
+        if team1 == team2:
+            winner = "REMIS!"
+        else:
+            winner = f"ZWYCIĘŻA {name1 if team1 > team2 else name2}!"
+        canvas.create_text(width / 2, y + board_height * .11, text="PODSUMOWANIE ROZGRYWKI", fill="#ffe62b", font=("Arial", max(20, int(width*.032)), "bold"))
+        canvas.create_text(x + board_width*.26, y + board_height * .33, text=f"{name1}\n{team1}", fill="white", font=("Arial", max(17, int(width*.024)), "bold"), justify="center")
+        canvas.create_text(x + board_width*.74, y + board_height * .33, text=f"{name2}\n{team2}", fill="white", font=("Arial", max(17, int(width*.024)), "bold"), justify="center")
+        canvas.create_text(width / 2, y + board_height * .54, text=winner, fill="#dfff22", font=("Arial", max(20, int(width*.028)), "bold"))
+        canvas.create_text(width / 2, y + board_height * .68, text=f"FINAŁ: {total} / {target}", fill="#dfff22", font=("Courier New", max(18, int(width*.028)), "bold"))
+        message = "CEL FINAŁU OSIĄGNIĘTY" if success else f"DO CELU FINAŁU BRAKUJE {target - total} PKT"
+        color = "#dfff22" if success else "#ff5e6b"
+        canvas.create_text(width / 2, y + board_height * .83, text=message, fill=color, font=("Arial", max(15, int(width*.022)), "bold"))
 class HostApp(tk.Tk):
     def __init__(self) -> None:
         super().__init__()
@@ -159,7 +186,7 @@ class HostApp(tk.Tk):
                 "strikes": 0, "sound_files": DEFAULT_SOUNDS.copy(), "answer_count": MIN_ANSWERS,
                 "reveal_history": [], "scores_unlocked": False, "final_mode": False,
                 "final_active_player": 1, "final_question_number": 1, "final_score1": 0,
-                "final_score2": 0, "final_target": 200, "final_timer": 0}
+                "final_score2": 0, "final_target": 200, "final_timer": 0, "final_summary": False}
 
     def _build_ui(self) -> None:
         root = ttk.Frame(self, padding=14)
@@ -226,6 +253,7 @@ class HostApp(tk.Tk):
             self.final_reveal_buttons.append(button)
         ttk.Button(self.final_actions, text="Dodaj punkty pytania", command=self.award_final_question).grid(row=4, column=0, columnspan=2, padx=3, pady=3, sticky="ew")
         ttk.Button(self.final_actions, text="Nowe pytanie finałowe", command=self.clear_final_question).grid(row=4, column=2, columnspan=2, padx=3, pady=3, sticky="ew")
+        ttk.Button(self.final_actions, text="★ Pokaż podsumowanie finału", command=self.show_final_summary).grid(row=5, column=0, columnspan=4, padx=3, pady=(7, 3), sticky="ew")
         for column in range(4):
             self.final_actions.columnconfigure(column, weight=1)
 
@@ -365,7 +393,7 @@ class HostApp(tk.Tk):
         if not messagebox.askyesno("Runda finałowa", "Rozpocząć finał? Wyniki drużyn zostaną zachowane."):
             return
         self.state.update({"final_mode": True, "final_active_player": 1, "final_question_number": 1,
-                           "final_score1": 0, "final_score2": 0, "final_timer": 0})
+                           "final_score1": 0, "final_score2": 0, "final_timer": 0, "final_summary": False})
         self.clear_final_question(advance=False)
         self.set_game_mode(True)
         self.refresh()
@@ -373,6 +401,7 @@ class HostApp(tk.Tk):
     def select_final_player(self, player: int) -> None:
         self.stop_final_timer()
         self.state["final_active_player"] = player
+        self.state["final_summary"] = False
         self.update_final_status()
         self.refresh()
 
@@ -381,7 +410,7 @@ class HostApp(tk.Tk):
         if advance:
             self.state["final_question_number"] = min(5, self.state["final_question_number"] + 1)
         self.state.update({"question": "", "answers": [], "round_points": 0, "strikes": 0,
-                           "reveal_history": [], "final_timer": 0})
+                           "reveal_history": [], "final_timer": 0, "final_summary": False})
         self.question_var.set("")
         self.answer_count_var.set(MIN_ANSWERS)
         for text, points in zip(self.answer_text, self.answer_points):
@@ -403,6 +432,11 @@ class HostApp(tk.Tk):
             self.stop_final_timer()
             self.update_final_status()
             self.refresh()
+
+    def show_final_summary(self) -> None:
+        self.stop_final_timer()
+        self.state["final_summary"] = True
+        self.refresh()
 
     def stop_final_timer(self) -> None:
         if self._final_timer_after:
