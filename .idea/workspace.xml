@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08cc0c18-c619-4eb4-881f-1c66cc3c398a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Familiada.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/sounds/blad.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/sounds/dobra-odpowiedz.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/sounds/intro-familiada.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/sounds/przed-i-po-rundzie-familiada.wav" afterDir="false" />
-    </list>
+    <list default="true" id="08cc0c18-c619-4eb4-881f-1c66cc3c398a" name="Changes" comment="Init" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,6 +16,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/tomaszgondek/Weselna-familiada",
+    "accountId": "456c1aa6-9418-4fa2-aec3-71be78cb3635"
+  }
+}]]></component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -38,18 +33,18 @@
       <entry key="S2" value="1.0" />
       <entry key="S5" value="1.0" />
       <entry key="S10" value="1.0" />
-      <entry key="S30" value="1.0" />
-      <entry key="S60" value="1.0" />
-      <entry key="M2" value="1.0" />
-      <entry key="M5" value="1.0" />
-      <entry key="M10" value="1.0" />
-      <entry key="M15" value="1.0" />
-      <entry key="M30" value="1.0" />
-      <entry key="H1" value="1.0" />
-      <entry key="H2" value="1.0" />
-      <entry key="H4" value="1.0" />
-      <entry key="D1" value="1.0" />
-      <entry key="W1" value="1.0" />
+      <entry key="S30" value="1.0000000000000453" />
+      <entry key="S60" value="1.0000002127702825" />
+      <entry key="M2" value="1.0004612702921836" />
+      <entry key="M5" value="1.0463001282519462" />
+      <entry key="M10" value="1.2151746459319643" />
+      <entry key="M15" value="1.359082354903149" />
+      <entry key="M30" value="1.5992348078200638" />
+      <entry key="H1" value="1.7741025822331715" />
+      <entry key="H2" value="1.8798309964039523" />
+      <entry key="H4" value="1.9379930684199924" />
+      <entry key="D1" value="1.989387923025899" />
+      <entry key="W1" value="1.9984770484944885" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -71,23 +66,23 @@
       <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.2588162309603444" />
-      <entry key="MS500" value="0.7631296044802796" />
-      <entry key="S2" value="0.9346512161853181" />
-      <entry key="S5" value="0.9733293741582382" />
-      <entry key="S10" value="0.9865745659392595" />
-      <entry key="S30" value="0.995504677670617" />
-      <entry key="S60" value="0.9977498071513805" />
-      <entry key="M2" value="0.9988742699416081" />
-      <entry key="M5" value="0.9995495558130941" />
-      <entry key="M10" value="0.9997747525383376" />
-      <entry key="M15" value="0.999849829387614" />
-      <entry key="M30" value="0.9999249118746938" />
-      <entry key="H1" value="0.9999624552325421" />
-      <entry key="H2" value="0.9999812274400666" />
-      <entry key="H4" value="0.9999906136759817" />
-      <entry key="D1" value="0.9999984356065453" />
-      <entry key="W1" value="0.9999997765150709" />
+      <entry key="MS100" value="0.9659363289248456" />
+      <entry key="MS500" value="0.9930924954370359" />
+      <entry key="S2" value="0.9982686325973925" />
+      <entry key="S5" value="0.9993070929904525" />
+      <entry key="S10" value="0.9996534864594093" />
+      <entry key="S30" value="0.9998844821426534" />
+      <entry key="S60" value="0.9999424516946691" />
+      <entry key="M2" value="1.000431870310883" />
+      <entry key="M5" value="1.046267720242042" />
+      <entry key="M10" value="1.2151204021793316" />
+      <entry key="M15" value="1.3590245804757608" />
+      <entry key="M30" value="1.5991878869947453" />
+      <entry key="H1" value="1.774072556027779" />
+      <entry key="H2" value="1.8798139983717481" />
+      <entry key="H4" value="1.9379840234370498" />
+      <entry key="D1" value="1.9893863351212249" />
+      <entry key="W1" value="1.9984768196195328" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
@@ -141,9 +136,22 @@
       <option name="presentableId" value="Default" />
       <updated>1788291602043</updated>
     </task>
+    <task id="LOCAL-00001" summary="Init">
+      <option name="closed" value="true" />
+      <created>1788296643524</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1788296643524</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Init" />
+    <option name="LAST_COMMIT_MESSAGE" value="Init" />
   </component>
 </project>
