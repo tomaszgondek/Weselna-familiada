@@ -4,7 +4,52 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08cc0c18-c619-4eb4-881f-1c66cc3c398a" name="Changes" comment="Init" />
+    <list default="true" id="08cc0c18-c619-4eb4-881f-1c66cc3c398a" name="Changes" comment="Init 2">
+      <change afterPath="$PROJECT_DIR$/Assets/sounds/czas-final-familiada.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/sounds/dzwoneczki-familiada.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/sounds/po-1-rundzie-finalu-familiada.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/sounds/powtorzenie-w-finale-familiada.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/sounds/przed-finalem-familiada.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/Sample/01 - Z czego słynie Francja.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/Sample/02 - Wymień miejsce, w którym można pływać.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/Sample/03 - Co znajdziemy w łazience.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/Sample/04 - Podaj przykład ptaka, który ma płewiaste stopy.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/Sample/05 - Jakie zwierzę można spotkać w Indiach.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/Sample/06 - Na czym można słuchać muzyki.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/Sample/07 - Co może kojarzyć się z czarownicami.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/Sample/08 - Co można powiesić.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/Sample/09 - Wymień składniki sałatki owocowej.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/Sample/10 - Jakie rzeczy mogą zniknąć za sprawą magika.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/Sample/11 - Jakie zwierzę można spotkać w Australii.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/Sample/12 - Na co możena się wspiąć.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/Sample/13 - Co porusza się bardzo powoli.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/Sample/14 - Co robi dużo hałasu.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/Sample/15 - Podaj przykład czegoś z włosiem.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/Sample/16 - Dzięki czemu można określić czas.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/Sample/17 - Co idzie w górę i w dół.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/Sample/18 - Czym można jeść.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/Sample/19 - Czego pieniądze nie mogą kupić.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/Sample/20 - Co jemy w czasie Świąt Bożonarodzeniowych.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/Sample/21 - Co robimy gdy nie możemy zasnąć.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/Sample/22 - Co można nosić na stopach.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/Sample/23 - Co można zastosować na ból głowy.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/Sample/24 - Podaj przykład czegoś, co może się wykluć.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/Sample/25 - Podaj przykład czegoś, co traci ważność.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/Sample/26 - Co żyje w skorupie.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/Sample/27 - Co można powiesić na ścianie.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/Sample/28 - Na co świeżo upieczeni rodzice poświęcają najwięcej czasu.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/Sample/29 - W co dzieci mogą zbierać cukierki podczas Halloween.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/Sample/30 - Wymień coś, co spodziewasz się zobaczyć w Paryżu.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/Sample/31 - Co można wygrać w parku rozrywki.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/Sample/32 - Podaj przykład gry, w którą można grać samemu.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/Sample/33 - Co można robić rozmawiając przez telefon.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/Sample/34 - Co może się przeterminować.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/Sample/35 - Wymień coś, czego nie można by było zrobić bez ust.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/Sample/36 - Wymień coś, co kojarzy się z latawcami.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questions/Sample/37 - Podaj przykład czegoś, co lata.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/familiada.py" beforeDir="false" afterPath="$PROJECT_DIR$/familiada.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +61,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "tomaszgondek"
+  }
+}]]></component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/tomaszgondek/Weselna-familiada",
@@ -28,23 +79,23 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.0" />
-      <entry key="S30" value="1.0000000000000453" />
-      <entry key="S60" value="1.0000002127702825" />
-      <entry key="M2" value="1.0004612702921836" />
-      <entry key="M5" value="1.0463001282519462" />
-      <entry key="M10" value="1.2151746459319643" />
-      <entry key="M15" value="1.359082354903149" />
-      <entry key="M30" value="1.5992348078200638" />
-      <entry key="H1" value="1.7741025822331715" />
-      <entry key="H2" value="1.8798309964039523" />
-      <entry key="H4" value="1.9379930684199924" />
-      <entry key="D1" value="1.989387923025899" />
-      <entry key="W1" value="1.9984770484944885" />
+      <entry key="MS100" value="1.0000190480676867" />
+      <entry key="MS500" value="1.1251056920358569" />
+      <entry key="S2" value="2.110747709907063" />
+      <entry key="S5" value="2.9768469032545535" />
+      <entry key="S10" value="3.427387088340587" />
+      <entry key="S30" value="3.793516998525035" />
+      <entry key="S60" value="3.8946623986745923" />
+      <entry key="M2" value="3.9468221070115903" />
+      <entry key="M5" value="3.9990179712143523" />
+      <entry key="M10" value="4.2025179450525005" />
+      <entry key="M15" value="4.482040722677961" />
+      <entry key="M30" value="5.170537555471083" />
+      <entry key="H1" value="5.858349458337286" />
+      <entry key="H2" value="6.355844744554224" />
+      <entry key="H4" value="6.656939678217141" />
+      <entry key="D1" value="6.939650342604303" />
+      <entry key="W1" value="6.991297286598626" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -66,23 +117,23 @@
       <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9659363289248456" />
-      <entry key="MS500" value="0.9930924954370359" />
-      <entry key="S2" value="0.9982686325973925" />
-      <entry key="S5" value="0.9993070929904525" />
-      <entry key="S10" value="0.9996534864594093" />
-      <entry key="S30" value="0.9998844821426534" />
-      <entry key="S60" value="0.9999424516946691" />
-      <entry key="M2" value="1.000431870310883" />
-      <entry key="M5" value="1.046267720242042" />
-      <entry key="M10" value="1.2151204021793316" />
-      <entry key="M15" value="1.3590245804757608" />
-      <entry key="M30" value="1.5991878869947453" />
-      <entry key="H1" value="1.774072556027779" />
-      <entry key="H2" value="1.8798139983717481" />
-      <entry key="H4" value="1.9379840234370498" />
-      <entry key="D1" value="1.9893863351212249" />
-      <entry key="W1" value="1.9984768196195328" />
+      <entry key="MS100" value="0.8467604657956113" />
+      <entry key="MS500" value="1.0867283867761963" />
+      <entry key="S2" value="2.088263441992108" />
+      <entry key="S5" value="2.962924997824755" />
+      <entry key="S10" value="3.419107320998477" />
+      <entry key="S30" value="3.7903953763749865" />
+      <entry key="S60" value="3.8930513226361136" />
+      <entry key="M2" value="3.9460035905139264" />
+      <entry key="M5" value="3.9986870697549035" />
+      <entry key="M10" value="4.202347358285926" />
+      <entry key="M15" value="4.481918787876879" />
+      <entry key="M30" value="5.17046137952516" />
+      <entry key="H1" value="5.858301590903922" />
+      <entry key="H2" value="6.355816823778796" />
+      <entry key="H4" value="6.656924439669357" />
+      <entry key="D1" value="6.939647595778538" />
+      <entry key="W1" value="6.991296888693749" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
@@ -108,7 +159,7 @@
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/PC/PycharmProjects/Familiada/Assets/sounds",
+    "last_opened_file_path": "C:/Users/PC/PycharmProjects/Familiada/questions/Sample",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -118,7 +169,12 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\PC\PycharmProjects\Familiada\questions\Sample" />
+      <recent name="C:\Users\PC\PycharmProjects\Familiada\questions" />
       <recent name="C:\Users\PC\PycharmProjects\Familiada\Assets\sounds" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\PC\PycharmProjects\Familiada\questions\Sample" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -144,7 +200,15 @@
       <option name="project" value="LOCAL" />
       <updated>1788296643524</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Init 2">
+      <option name="closed" value="true" />
+      <created>1788296748174</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1788296748174</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,6 +216,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init" />
+    <MESSAGE value="Init 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Init 2" />
   </component>
 </project>

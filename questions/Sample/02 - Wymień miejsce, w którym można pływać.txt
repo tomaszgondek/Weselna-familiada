@@ -1,0 +1,8 @@
+PYTANIE: Wymień miejsce, w którym można pływać:
+
+ODPOWIEDZI:
+1. MORZE — 33 pkt
+2. BASEN — 27 pkt
+3. JEZIORO — 21 pkt
+4. OCEAN — 11 pkt
+5. RZEKA — 8 pkt

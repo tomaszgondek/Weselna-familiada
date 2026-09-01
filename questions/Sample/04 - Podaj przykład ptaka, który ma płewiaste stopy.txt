@@ -1,0 +1,8 @@
+PYTANIE: Podaj przykład ptaka, który ma płewiaste stopy:
+
+ODPOWIEDZI:
+1. KACZKA — 33 pkt
+2. ŁABĘDŹ — 28 pkt
+3. PINGWIN — 21 pkt
+4. GĘŚ — 14 pkt
+5. ALBATROS — 4 pkt
