@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="08cc0c18-c619-4eb4-881f-1c66cc3c398a" name="Changes" comment="Tweaks and final">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/familiada.py" beforeDir="false" afterPath="$PROJECT_DIR$/familiada.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +173,15 @@
       <option name="project" value="LOCAL" />
       <updated>1788300305665</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Tweaks and final">
+      <option name="closed" value="true" />
+      <created>1788302319260</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1788302319260</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

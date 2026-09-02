@@ -481,7 +481,7 @@ class HostApp(tk.Tk):
         unlocked = self.score_lock_var.get()
         self.state["scores_unlocked"] = unlocked
         self.score_lock_button.config(
-            text="🔓 Edycja punktów odblokowana" if unlocked else "Odblokuj edycję punktów"
+            text="Edycja punktów odblokowana" if unlocked else "Odblokuj edycję punktów"
         )
         for widget in getattr(self, "score_edit_widgets", []):
             widget.config(state="normal" if unlocked else "disabled")
