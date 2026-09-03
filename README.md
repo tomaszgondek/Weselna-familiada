@@ -1,80 +1,112 @@
-# Weselna Familiada
+# Weselna Familiada — instrukcja obsługi
 
-Lokalna aplikacja do weselnej gry w stylu teleturnieju. Działa na jednym komputerze: prowadzący obsługuje panel, a osobne okno tablicy można przenieść na telewizor lub projektor.
+Program służy do prowadzenia weselnej gry w stylu Familiady. Prowadzący obsługuje panel sterujący, a osobne okno **tablicy** wyświetla się uczestnikom na telewizorze lub projektorze.
 
-## Gotowa wersja dla Windows
+Nie wymaga instalowania Pythona ani żadnych dodatkowych programów.
 
-Pobierz i rozpakuj [WeselnaFamiliada.zip](dist/WeselnaFamiliada.zip), a następnie uruchom `WeselnaFamiliada.exe` z rozpakowanego folderu. Python nie jest potrzebny.
+## Uruchomienie
 
-Nie uruchamiaj EXE bezpośrednio z podglądu ZIP — najpierw rozpakuj cały folder, ponieważ zawiera on też dźwięki aplikacji.
+1. Rozpakuj cały plik ZIP do wybranego folderu.
+2. Nie przenoś ani nie usuwaj podfolderów `assets` i `questions`.
+3. Uruchom `WeselnaFamiliada.exe`.
 
-## Uruchomienie z kodu źródłowego
+> Nie uruchamiaj programu bezpośrednio z podglądu ZIP-a. Dźwięki i pytania muszą pozostać obok EXE w rozpakowanym folderze.
 
-W katalogu projektu uruchom:
+Po uruchomieniu pojawią się dwa okna:
 
-```powershell
-.\.venv\Scripts\python.exe .\familiada.py
-```
+- **Familiada — panel prowadzącego** — to tutaj sterujesz grą.
+- **Familiada — TABLICA** — to okno dla gości.
+
+## Tablica na telewizorze lub projektorze
+
+1. Podłącz drugi ekran w Windows i ustaw go jako **Rozszerz te ekrany**.
+2. W panelu prowadzącego kliknij **Pełny ekran tablicy (projektor)**.
+3. Program umieści tablicę na pierwszym ekranie innym niż ekran główny.
+4. Klawisz `Esc`, gdy aktywne jest okno tablicy, wychodzi z pełnego ekranu.
+
+Przycisk **Pokaż tablicę** przywraca ukryte okno tablicy bez przechodzenia na pełny ekran.
 
 ## Zwykła runda
 
-1. Wpisz pytanie, wybierz liczbę odpowiedzi (4–6), a następnie ich treść i punktację.
-2. Kliknij **Pokaż tablicę**. Przycisk **Pełny ekran tablicy (projektor)** otwiera bezramkową tablicę dokładnie na pierwszym ekranie innym niż główny (to pewniejsze niż systemowy fullscreen Tkintera). Na jednym ekranie używa zwykłego pełnego ekranu. Klawisz `Esc` zawsze wraca do zwykłego okna.
-3. Używaj przycisków **Odkryj**. Punkty rundy naliczają się automatycznie.
-4. W razie pomyłki użyj **Cofnij ostatnie odkrycie** — odpowiedź zostanie ukryta, a jej punkty odjęte od sumy rundy.
-5. Trzy błędy obsłużysz przyciskiem **Błąd**; **Wyczyść błędy** usuwa je z tablicy.
-6. Na końcu wybierz **Przyznaj rundę → D1/D2**.
+1. W polu **PYTANIE** wpisz pytanie.
+2. Wybierz liczbę odpowiedzi: od 4 do 6.
+3. Wpisz odpowiedzi i ich punktację.
+4. Kliknij **Pokaż tablicę** albo wyświetl ją na projektorze.
+5. Podczas gry klikaj **Odkryj 1**, **Odkryj 2** itd. Punkty są automatycznie doliczane do sumy rundy.
+6. Za złą odpowiedź kliknij **Błąd**. Na tablicy pojawi się znak błędu. **Wyczyść błędy** usuwa wszystkie trzy znaki.
+7. Jeśli coś odkryjesz przez pomyłkę, użyj **Cofnij ostatnie odkrycie**. Program ukryje odpowiedź i odejmie jej punkty od sumy rundy.
+8. Na końcu kliknij **Przyznaj rundę → D1** lub **Przyznaj rundę → D2**. Punkty rundy zostaną dopisane do wybranej drużyny.
 
-## Drużyny i wyniki
+## Drużyny i ręczna korekta punktów
 
-W sekcji **Wyniki drużyn** można nadać własne nazwy obu drużynom. Zatwierdź nazwę Enterem albo kliknięciem poza polem — pojawi się od razu na tablicy.
+W sekcji **Wyniki drużyn**:
 
-Ręczna korekta punktów (`−1`, pole wyniku, `+1`) jest domyślnie zablokowana. Kliknij **Punkty zablokowane — kliknij, aby odblokować**, aby ją włączyć. Automatyczne przyznawanie punktów za rundę działa niezależnie od tej blokady.
+- wpisz nazwy drużyn w polach po lewej i prawej stronie;
+- zatwierdź nazwę Enterem albo kliknięciem poza polem;
+- użyj `−1`, pola wyniku albo `+1`, jeżeli trzeba poprawić wynik ręcznie.
 
-## Finał
+Ręczna edycja wyniku jest domyślnie zablokowana. Najpierw zaznacz **Odblokuj edycję punktów**. Nie wpływa to na automatyczne przyznawanie punktów za rundę.
 
-Kliknij **Przejdź do finału**, a następnie **Importuj 5 pytań finałowych…**. Wybierz dokładnie pięć zwykłych plików TXT z pytaniami rund zasadniczych — po jednym pliku na pytanie finałowe.
+## Wczytywanie pytań
 
-- Zawodnik 1 ma 15 sekund, zawodnik 2 — 20 sekund.
-- Panel ma wspólne przyciski poprzedniego/następnego pytania. Oba segmenty zawodników pracują na tym samym aktualnie wyświetlanym pytaniu.
-- Panel prowadzącego pokazuje pełną listę możliwych odpowiedzi z punktami oraz dwa niezależne segmenty: **Zawodnik 1** i **Zawodnik 2**.
-- Wpisz numer odpowiedzi z listy. `0` albo puste pole oznacza **brak odpowiedzi** i zapisuje 0 pkt.
-- Prowadzący podaje wyłącznie numer odpowiedzi z listy, a aplikacja automatycznie przypisuje tekst i punktację. Drugi zawodnik nie może wybrać tego samego numeru co pierwszy; pojawia się wtedy sygnał powtórzenia.
-- Numer `0` oznacza brak odpowiedzi; po odsłonięciu aplikacja pokazuje 0 pkt.
-- Każdy segment ma własne przyciski odsłonięcia odpowiedzi i punktów. Odsłonięcie punktów dolicza wynik i odtwarza dzwoneczki.
-- Zmiana aktywnego zawodnika otwiera pytanie 1 z tego samego zestawu, bez utraty odpowiedzi pierwszego zawodnika.
-- **Pokaż podsumowanie finału** wyświetla na tablicy pełne podsumowanie: nazwy i wyniki obu drużyn, zwycięzcę albo remis oraz sumę i rezultat finału względem progu 200 punktów.
+Kliknij **Wczytaj pytanie** i wybierz plik TXT z folderu `questions`. Można też użyć pliku JSON zapisanego przez program.
 
-Przycisk **Wróć do rundy zasadniczej** opuszcza widok finału i przywraca zwykłe sterowanie.
-
-Każdy wybrany plik musi mieć zwykły format pytania — z 4–6 odpowiedziami oraz punktami. Plik [przykladowe_pytanie.txt](questions/przykladowe_pytanie.txt) jest przykładem takiego formatu.
-
-## Pytania w TXT
-
-Przycisk **Wczytaj pytanie** obsługuje pliki `.txt` i `.json`. Pytania tekstowe znajdują się w katalogu `questions`.
-
-Format pliku TXT:
+Format pytania TXT:
 
 ```text
 PYTANIE: Co goście weselni robią najczęściej po północy?
 
-ODPOWIEDZI:
 1. TAŃCZĄ — 38 pkt
 2. JEDZĄ — 27 pkt
 3. ROZMAWIAJĄ — 16 pkt
 4. ROBIĄ ZDJĘCIA — 11 pkt
 ```
 
-Plik musi zawierać pytanie oraz od 4 do 6 odpowiedzi. Przykład: [przykladowe_pytanie.txt](questions/przykladowe_pytanie.txt).
+Każdy plik musi mieć od 4 do 6 odpowiedzi. Możesz tworzyć własne pliki TXT według tego wzoru i dodawać je do folderu `questions`.
 
 ## Dźwięki
 
-Katalog `assets/sounds` zawiera efekty WAV. Aplikacja automatycznie używa ich dla intra, dobrej odpowiedzi, błędu, końca rundy i końca czasu w finale.
+- **Zagraj intro** uruchamia muzykę otwarcia.
+- Przy odkryciu odpowiedzi, błędzie, przyznaniu rundy i finale program odtwarza przypisane efekty automatycznie.
+- Dolny **soundbar** zawiera przyciski do ręcznego odtworzenia wszystkich plików WAV z folderu `assets\\sounds`.
+- Przycisk **Dźwięki WAV…** umożliwia wskazanie innych plików dla najważniejszych efektów.
 
-WAV-y są odtwarzane kolejno w osobnym wątku, aby krótkie sygnały nie były ucinane przez opóźnienie głośnika Bluetooth.
+Przy głośniku Bluetooth dźwięki są odtwarzane kolejno, dzięki czemu krótkie sygnały nie powinny być ucinane.
 
-Na dole panelu znajduje się **soundbar**, który tworzy przycisk odtwarzania dla każdego pliku WAV w tym katalogu. Przycisk **Dźwięki WAV…** pozwala dodatkowo ręcznie podmienić przypisania efektów.
+## Finał
+
+Finał używa dokładnie pięciu zwykłych pytań. W finale gra dwóch zawodników zwycięskiej drużyny.
+
+### Przygotowanie
+
+1. Kliknij **Przejdź do finału**.
+2. Kliknij **Importuj 5 pytań finałowych…**.
+3. Wskaż dokładnie pięć plików TXT z pytaniami rund zasadniczych.
+
+Panel pokaże pełną listę możliwych odpowiedzi i punktów dla aktualnego pytania. Uczestnicy nie widzą tej listy — widzi ją tylko prowadzący.
+
+### Zawodnik 1
+
+1. Dla każdego z pięciu pytań wpisz w panelu numer wybranej odpowiedzi z listy.
+2. Kliknij **Zapisz odpowiedź**.
+3. Przycisk **Start 15 s** uruchamia odliczanie dla pierwszego zawodnika.
+4. Po zebraniu odpowiedzi odsłaniaj je przyciskiem **Odsłoń odpowiedź**, a następnie **Odsłoń punkty**.
+
+### Zawodnik 2
+
+1. W prawym segmencie wpisuj numery odpowiedzi drugiego zawodnika dla tych samych pięciu pytań.
+2. Przycisk **Start 20 s** uruchamia jego czas.
+3. Jeśli wybierze ten sam numer odpowiedzi co zawodnik 1 przy tym samym pytaniu, program odtworzy sygnał i nie zapisze wyboru — należy podać inną odpowiedź.
+4. Odsłaniaj odpowiedzi i punkty tak samo jak dla zawodnika 1.
+
+W polu numeru odpowiedzi wpisanie `0` lub pozostawienie pustego pola oznacza **brak odpowiedzi**. Po odsłonięciu zostanie pokazane 0 pkt.
+
+Punkty obu zawodników sumują się. Cel finału to **200 punktów**. Przycisk **Pokaż podsumowanie finału** wyświetla końcowy ekran z wynikiem finału oraz wynikiem drużyn.
+
+## Powrót z finału
+
+Kliknij **Wróć do rundy zasadniczej**. Program przywróci pytanie i stan zwykłej rundy, który był widoczny przed wejściem do finału, włącznie z odkrytymi odpowiedziami, punktami rundy i błędami.
 
 ## Zapis gry
 
-Przycisk **Zapisz pytanie** zapisuje bieżący stan gry do JSON: pytanie, odpowiedzi, wyniki, nazwy drużyn i tryb finałowy. Wczytanie JSON przywraca zapisany stan, z wyjątkiem ręcznej edycji punktów — ta zawsze startuje z blokadą.
+**Zapisz pytanie** zapisuje bieżący stan do pliku JSON: pytanie, odpowiedzi, wyniki drużyn, nazwy oraz stan finału. Taki plik można później otworzyć przez **Wczytaj pytanie**.

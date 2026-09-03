@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08cc0c18-c619-4eb4-881f-1c66cc3c398a" name="Changes" comment="Tweaks and final #2">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/familiada.py" beforeDir="false" afterPath="$PROJECT_DIR$/familiada.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questions/przykladowe_pytanie.txt" beforeDir="false" />
-    </list>
+    <list default="true" id="08cc0c18-c619-4eb4-881f-1c66cc3c398a" name="Changes" comment="Tweaks and final #3" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,12 +45,12 @@
       <entry key="M5" value="1.0" />
       <entry key="M10" value="1.0" />
       <entry key="M15" value="1.0" />
-      <entry key="M30" value="1.0000000003725351" />
-      <entry key="H1" value="1.000064195446421" />
-      <entry key="H2" value="1.0274266145537072" />
-      <entry key="H4" value="1.571857407429846" />
-      <entry key="D1" value="8.222120792832854" />
-      <entry key="W1" value="12.160248547815941" />
+      <entry key="M30" value="1.0000000000115472" />
+      <entry key="H1" value="1.0000033983377308" />
+      <entry key="H2" value="1.0018939571140715" />
+      <entry key="H4" value="1.0674874176713214" />
+      <entry key="D1" value="5.865402757086889" />
+      <entry key="W1" value="12.282109250058513" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -88,12 +83,12 @@
       <entry key="M5" value="0.99998844761372" />
       <entry key="M10" value="0.9999942237901777" />
       <entry key="M15" value="0.9999961491897447" />
-      <entry key="M30" value="0.9999980749655516" />
-      <entry key="H1" value="1.0000632324649674" />
-      <entry key="H2" value="1.0274260635750767" />
-      <entry key="H4" value="1.5718563764679447" />
-      <entry key="D1" value="8.222118963795017" />
-      <entry key="W1" value="12.160248142159414" />
+      <entry key="M30" value="0.9999980746045659" />
+      <entry key="H1" value="1.0000024356305046" />
+      <entry key="H2" value="1.0018934747463053" />
+      <entry key="H4" value="1.0674871327310804" />
+      <entry key="D1" value="5.865401634649346" />
+      <entry key="W1" value="12.282108867965654" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
@@ -192,7 +187,15 @@
       <option name="project" value="LOCAL" />
       <updated>1788361974740</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Tweaks and final #3">
+      <option name="closed" value="true" />
+      <created>1788427380380</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1788427380380</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,6 +206,7 @@
     <MESSAGE value="Init 2" />
     <MESSAGE value="Tweaks and final" />
     <MESSAGE value="Tweaks and final #2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tweaks and final #2" />
+    <MESSAGE value="Tweaks and final #3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tweaks and final #3" />
   </component>
 </project>
