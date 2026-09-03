@@ -19,7 +19,7 @@ W katalogu projektu uruchom:
 ## Zwykła runda
 
 1. Wpisz pytanie, wybierz liczbę odpowiedzi (4–6), a następnie ich treść i punktację.
-2. Kliknij **Pokaż tablicę**, przesuń drugie okno na ekran TV/projektora i użyj **Pełny ekran tablicy**. Klawisz `F11` przełącza pełny ekran, a `Esc` go wyłącza.
+2. Kliknij **Pokaż tablicę**. Przycisk **Pełny ekran tablicy (projektor)** otwiera bezramkową tablicę dokładnie na pierwszym ekranie innym niż główny (to pewniejsze niż systemowy fullscreen Tkintera). Na jednym ekranie używa zwykłego pełnego ekranu. Klawisz `Esc` zawsze wraca do zwykłego okna.
 3. Używaj przycisków **Odkryj**. Punkty rundy naliczają się automatycznie.
 4. W razie pomyłki użyj **Cofnij ostatnie odkrycie** — odpowiedź zostanie ukryta, a jej punkty odjęte od sumy rundy.
 5. Trzy błędy obsłużysz przyciskiem **Błąd**; **Wyczyść błędy** usuwa je z tablicy.
@@ -33,17 +33,21 @@ Ręczna korekta punktów (`−1`, pole wyniku, `+1`) jest domyślnie zablokowana
 
 ## Finał
 
-Kliknij **Przejdź do finału**. Panel zmieni sterowanie na finałowe, a tablica pokaże wyniki zawodników, cel 200 punktów i licznik czasu.
+Kliknij **Przejdź do finału**, a następnie **Importuj 5 pytań finałowych…**. Wybierz dokładnie pięć zwykłych plików TXT z pytaniami rund zasadniczych — po jednym pliku na pytanie finałowe.
 
 - Zawodnik 1 ma 15 sekund, zawodnik 2 — 20 sekund.
-- Każdy zawodnik odpowiada na maksymalnie 5 pytań.
-- Wybierz zawodnika, wczytaj lub wpisz pytanie, odkrywaj odpowiedzi i użyj **Dodaj punkty pytania**.
-- **Nowe pytanie finałowe** czyści bieżące pytanie i przechodzi do kolejnego.
-- Zmiana aktywnego zawodnika nie kasuje obecnie wyświetlanego pytania.
-- Wczytanie pytania `.txt` w finale nie wyłącza finału ani nie resetuje wyników.
+- Panel ma wspólne przyciski poprzedniego/następnego pytania. Oba segmenty zawodników pracują na tym samym aktualnie wyświetlanym pytaniu.
+- Panel prowadzącego pokazuje pełną listę możliwych odpowiedzi z punktami oraz dwa niezależne segmenty: **Zawodnik 1** i **Zawodnik 2**.
+- Wpisz numer odpowiedzi z listy. `0` albo puste pole oznacza **brak odpowiedzi** i zapisuje 0 pkt.
+- Prowadzący podaje wyłącznie numer odpowiedzi z listy, a aplikacja automatycznie przypisuje tekst i punktację. Drugi zawodnik nie może wybrać tego samego numeru co pierwszy; pojawia się wtedy sygnał powtórzenia.
+- Numer `0` oznacza brak odpowiedzi; po odsłonięciu aplikacja pokazuje 0 pkt.
+- Każdy segment ma własne przyciski odsłonięcia odpowiedzi i punktów. Odsłonięcie punktów dolicza wynik i odtwarza dzwoneczki.
+- Zmiana aktywnego zawodnika otwiera pytanie 1 z tego samego zestawu, bez utraty odpowiedzi pierwszego zawodnika.
 - **Pokaż podsumowanie finału** wyświetla na tablicy pełne podsumowanie: nazwy i wyniki obu drużyn, zwycięzcę albo remis oraz sumę i rezultat finału względem progu 200 punktów.
 
 Przycisk **Wróć do rundy zasadniczej** opuszcza widok finału i przywraca zwykłe sterowanie.
+
+Każdy wybrany plik musi mieć zwykły format pytania — z 4–6 odpowiedziami oraz punktami. Plik [przykladowe_pytanie.txt](questions/przykladowe_pytanie.txt) jest przykładem takiego formatu.
 
 ## Pytania w TXT
 
@@ -66,6 +70,8 @@ Plik musi zawierać pytanie oraz od 4 do 6 odpowiedzi. Przykład: [przykladowe_p
 ## Dźwięki
 
 Katalog `assets/sounds` zawiera efekty WAV. Aplikacja automatycznie używa ich dla intra, dobrej odpowiedzi, błędu, końca rundy i końca czasu w finale.
+
+WAV-y są odtwarzane kolejno w osobnym wątku, aby krótkie sygnały nie były ucinane przez opóźnienie głośnika Bluetooth.
 
 Na dole panelu znajduje się **soundbar**, który tworzy przycisk odtwarzania dla każdego pliku WAV w tym katalogu. Przycisk **Dźwięki WAV…** pozwala dodatkowo ręcznie podmienić przypisania efektów.
 
